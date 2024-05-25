@@ -1,0 +1,160 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #000;
+  font-size: 62.5%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+  }
+
+  .header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: slateblue;
+  }
+
+  .header .navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .header .navbar a:hover,
+  .header .navbar a.active {
+    color: slateblue;
+  }
+
+  .home {
+    min-height: 100vh;
+    padding: 5rem 9% 0 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .home .content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .home .content h3:nth-of-type(2) {
+    margin-bottom: 1rem;
+  }
+
+  .home .content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .home .content h3 span {
+    color: slateblue;
+    position: relative;
+  }
+
+  .home .content h3 span::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    border-left: 3px solid slateblue;
+    animation: writeAnim 4s steps(12) infinite;
+  }
+
+  @keyframes writeAnim {
+    40%,
+    60% {
+      left: calc(100% + 4px);
+    }
+
+      100% {
+        left: 0;
+      }
+    }
+
+    .home .content p {
+      font-size: 0.9rem;
+      max-width: 90%;
+    }
+
+    .home .content .social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 2px solid slateblue;
+      border-radius: 50%;
+      margin: 2rem 1rem 2rem 0;
+      font-size: 1rem;
+      color: slateblue;
+      transition: 0.3s;
+    }
+    .home .content .btn {
+      display: inline-block;
+      padding: 0.5rem 2.8rem;
+      background: slateblue;
+      color: #000;
+      border-radius: 4rem;
+      border: none;
+      outline: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .home .content .btn:hover {
+      box-shadow: 0 0 1rem slateblue;
+    }
+
+    .home .image img {
+      width: 25vw;
+      height: 25vw;
+      border: 3px solid slateblue;
+      border-radius: 70%;
+      transition: 0.1s;
+      animation: floatImg 4s ease-in-out infinite;
+    }
+
+    .home .image img:hover {
+      box-shadow: 0 0 1.6rem slateblue;
+    }
+
+    @keyframes floatImg {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-2.4rem);
+        }
+      }
